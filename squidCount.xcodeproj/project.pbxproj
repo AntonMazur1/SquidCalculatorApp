@@ -39,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F735E99289021E1005F2D77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F735E972890204F005F2D77 /* Figures.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		89B52488289018B5001B417B = {
 			isa = PBXGroup;
 			children = (
@@ -65,7 +73,7 @@
 				89B5249D289018B6001B417B /* Assets.xcassets */,
 				89B5249F289018B6001B417B /* LaunchScreen.storyboard */,
 				89B524A2289018B6001B417B /* Info.plist */,
-				7F735E972890204F005F2D77 /* Figures.swift */,
+				7F735E99289021E1005F2D77 /* Model */,
 			);
 			path = squidCount;
 			sourceTree = "<group>";
