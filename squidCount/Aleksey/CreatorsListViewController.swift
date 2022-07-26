@@ -8,6 +8,10 @@
 import UIKit
 
 class CreatorsListViewController: UITableViewController {
+    
+    private let creators = Creator.getEmployeDetails()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +27,7 @@ class CreatorsListViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return creators.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
