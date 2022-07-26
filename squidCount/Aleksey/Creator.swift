@@ -21,7 +21,7 @@ struct Creator {
         [
             Creator(
                 name: "Anton",
-                surname: "Фамилия",
+                surname: "Mazur",
                 position: "TeamLead",
                 photo: "Anton"
             ),
@@ -38,8 +38,8 @@ struct Creator {
                 photo: "Vladimir"
             ),
             Creator(
-                name: "Sergey",
-                surname: "Фамилия",
+                name: "Sergejs",
+                surname: "Tiseļskis",
                 position: "Developer",
                 photo: "Sergey"
             ),

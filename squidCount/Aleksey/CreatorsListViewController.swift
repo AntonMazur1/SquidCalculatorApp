@@ -27,8 +27,9 @@ class CreatorsListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "creator") as? CustomTableViewCell
-        let creator = creators[indexPath.row]
         
+        
+        let creator = creators[indexPath.row]
         cell?.avatarImage.image = UIImage(named: creator.photo)
         cell?.nameLabel.text = creator.fullName
         cell?.positionLabel.text = creator.position
