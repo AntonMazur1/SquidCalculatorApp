@@ -1,5 +1,5 @@
 //
-//  Figures.swift
+//  Shapes.swift
 //  squidCount
 //
 //  Created by John Doe on 26/07/2022.
