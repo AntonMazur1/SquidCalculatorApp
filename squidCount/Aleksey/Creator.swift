@@ -19,11 +19,11 @@ struct Creator {
     
     static func getEmployeDetails() -> [Creator] {
         [
-            Creator(name: "Антон", surname: "Фамилия", position: "TeamLead", photo: "Антон"),
-            Creator(name: "Илья", surname: "Фамилия", position: "Developer", photo: "Илья"),
-            Creator(name: "Владимир", surname: "Прощин",  position: "Developer", photo: "Владимир"),
-            Creator(name: "Сергей", surname: "Фамилия", position: "Developer", photo: "Сергей"),
-            Creator(name: "Алексей", surname: "Иванов", position: "Developer", photo: "Алексей")
+            Creator(name: "Anton", surname: "Фамилия", position: "TeamLead", photo: "Anton"),
+            Creator(name: "Ilya", surname: "Sesyunin", position: "Developer", photo: "Ilya"),
+            Creator(name: "Vladimir", surname: "Прощин",  position: "Developer", photo: "Vladimir"),
+            Creator(name: "Sergey", surname: "Фамилия", position: "Developer", photo: "Sergey"),
+            Creator(name: "Aleksey", surname: "Ivanov", position: "Developer", photo: "Aleksey")
         ]
     }
 }

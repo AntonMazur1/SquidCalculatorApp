@@ -29,8 +29,8 @@ class CreatorsListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "creator") as? CustomTableViewCell
         let creator = creators[indexPath.row]
         
-        cell?.avatarImage.image = UIImage(named: "Алексей")
-        cell?.nameLabel.text = creator.name
+        cell?.avatarImage.image = UIImage(named: creator.photo)
+        cell?.nameLabel.text = creator.fullName
         cell?.positionLabel.text = creator.position
         cell?.avatarImage.layer.cornerRadius = (cell?.avatarImage.frame.size.height)! / 2
         
