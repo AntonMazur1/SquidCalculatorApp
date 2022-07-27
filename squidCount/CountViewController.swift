@@ -30,7 +30,7 @@ class CountViewController: UIViewController {
     
     @IBOutlet var results: UIStackView!
     
-    var shape: Shape = .rectangle
+    var shape: Shape = .triangle
     
     
     override func viewDidLoad() {

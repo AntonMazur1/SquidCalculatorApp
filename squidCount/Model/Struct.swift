@@ -56,7 +56,7 @@ struct Triangle {
     
     var square: Double {
         let p = ( sideOne + sideTwo + sideThree ) / 2
-        return ( p * (p - sideOne) * ( p - sideTwo ) * ( p - sideThree )).squareRoot()
+        return sqrt(( p * (p - sideOne) * ( p - sideTwo ) * ( p - sideThree )))
     }
     
     var perimeter: Double {
