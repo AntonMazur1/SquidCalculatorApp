@@ -10,7 +10,7 @@
         <!--Creators List-->
         <scene sceneID="g1K-4i-cCw">
             <objects>
-                <tableViewController storyboardIdentifier="Creators" id="NT4-aW-JL8" customClass="CreatorsListViewController" customModule="squidCount" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="NT4-aW-JL8" customClass="CreatorsListViewController" customModule="squidCount" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="AzW-uy-fct">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +80,7 @@
         <!--Navigation Controller-->
         <scene sceneID="2u6-he-YHo">
             <objects>
-                <navigationController id="8i2-kq-tlv" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="2" id="8i2-kq-tlv" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" largeTitles="YES" id="Z5W-T2-Gme">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
