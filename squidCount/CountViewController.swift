@@ -14,8 +14,7 @@ class CountViewController: UIViewController {
     @IBOutlet var perimeterLabel: UILabel!
     @IBOutlet var squareLabel: UILabel!
     
-    
-    @IBOutlet var radiusTextFIeld: UITextField!
+    @IBOutlet var radiusTextField: UITextField!
     
     @IBOutlet var heightTextField: UITextField!
     @IBOutlet var widthTextField: UITextField!
@@ -31,7 +30,7 @@ class CountViewController: UIViewController {
     
     @IBOutlet var results: UIStackView!
     
-    var shape: Shape = .triangle
+    var shape: Shape = .rectangle
     
     
     override func viewDidLoad() {
@@ -48,7 +47,7 @@ class CountViewController: UIViewController {
         switch shape {
         case .circle:
             var figure = Circle.getCircle()
-            figure.radius = Double(radiusTextFIeld.text ?? "") ?? 0
+            figure.radius = Double(radiusTextField.text ?? "") ?? 0
             
             perimeterLabel.text = String(figure.perimeter)
             squareLabel.text = String(figure.square)
