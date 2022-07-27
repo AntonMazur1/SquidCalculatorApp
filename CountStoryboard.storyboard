@@ -152,13 +152,6 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Smc-vw-DK7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="leb-3Q-0Ch"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -186,10 +179,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="Nsa-lB-FUa"/>
                     <connections>
+                        <outlet property="circleParameters" destination="qiC-do-qrw" id="bXG-zE-Fhx"/>
                         <outlet property="figureImageView" destination="In3-bh-tik" id="hIq-uC-6nm"/>
+                        <outlet property="heightTextField" destination="W2b-9j-LHD" id="PsY-XJ-EGH"/>
                         <outlet property="perimeterLabel" destination="gmd-6t-iZi" id="DxD-NX-zbS"/>
-                        <outlet property="radiusTextField" destination="mo3-V9-Cvz" id="23l-3S-2te"/>
+                        <outlet property="radiusTextField" destination="9cc-ay-p7X" id="2oh-kf-Geq"/>
+                        <outlet property="rectangleParameters" destination="5Ww-lP-2j5" id="dch-nD-SDn"/>
+                        <outlet property="sideOneTextField" destination="ivC-mi-zOC" id="don-i0-IP1"/>
+                        <outlet property="sideThreeTextField" destination="fcw-mQ-G2x" id="gTL-XD-i73"/>
+                        <outlet property="sideTwoTextField" destination="Ld6-NC-GBf" id="UhK-8N-yDi"/>
                         <outlet property="squareLabel" destination="igM-FE-ZoV" id="kbz-PL-imX"/>
+                        <outlet property="triangleParameters" destination="kUu-B2-nZ0" id="aj1-w7-DwK"/>
+                        <outlet property="widthTextField" destination="7EH-0x-zqI" id="5oz-zy-vgF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
