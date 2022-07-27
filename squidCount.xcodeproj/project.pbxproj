@@ -40,7 +40,7 @@
 		8A7BAFEB289154C200CA4795 /* CreatorsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreatorsViewController.storyboard; sourceTree = "<group>"; };
 		8A7BAFEC289154C200CA4795 /* CreatorsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorsListViewController.swift; sourceTree = "<group>"; };
 		8A7BAFED289154C200CA4795 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		CE573F2A28911659000B8E4F /* CountStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CountStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		CE573F2A28911659000B8E4F /* CountStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = CountStoryboard.storyboard; path = squidCount/Storyboards/CountStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		CE573F2C28911694000B8E4F /* CountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,14 +55,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7F735E99289021E1005F2D77 /* Model */ = {
+		7F735E99289021E1005F2D77 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8A7BAFEA289154C200CA4795 /* Creator.swift */,
 				7F735E9A289045E6005F2D77 /* Rectangle.swift */,
 				7F735E9C2890809F005F2D77 /* Triangle.swift */,
 				7F735E9E289083CC005F2D77 /* Circle.swift */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8964E216289168220016759B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				89B5249A289018B5001B417B /* Main.storyboard */,
+				CE573F2A28911659000B8E4F /* CountStoryboard.storyboard */,
+				8A7BAFEB289154C200CA4795 /* CreatorsViewController.storyboard */,
+				89B5249F289018B6001B417B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8964E2172891683C0016759B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				89B52494289018B5001B417B /* AppDelegate.swift */,
+				89B52496289018B5001B417B /* SceneDelegate.swift */,
+				89B524A2289018B6001B417B /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		8964E218289168590016759B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				89B5249D289018B6001B417B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8964E219289168620016759B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				89B52498289018B5001B417B /* MainViewController.swift */,
+				CE573F2C28911694000B8E4F /* CountViewController.swift */,
+				8A7BAFEC289154C200CA4795 /* CreatorsListViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8964E21A289168740016759B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8A7BAFED289154C200CA4795 /* CustomTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		89B52488289018B5001B417B = {
@@ -84,20 +132,12 @@
 		89B52493289018B5001B417B /* squidCount */ = {
 			isa = PBXGroup;
 			children = (
-				CE573F2A28911659000B8E4F /* CountStoryboard.storyboard */,
-				CE573F2C28911694000B8E4F /* CountViewController.swift */,
-				89B52494289018B5001B417B /* AppDelegate.swift */,
-				89B52496289018B5001B417B /* SceneDelegate.swift */,
-				89B52498289018B5001B417B /* MainViewController.swift */,
-				89B5249A289018B5001B417B /* Main.storyboard */,
-				89B5249D289018B6001B417B /* Assets.xcassets */,
-				89B5249F289018B6001B417B /* LaunchScreen.storyboard */,
-				89B524A2289018B6001B417B /* Info.plist */,
-				8A7BAFEA289154C200CA4795 /* Creator.swift */,
-				8A7BAFEB289154C200CA4795 /* CreatorsViewController.storyboard */,
-				8A7BAFEC289154C200CA4795 /* CreatorsListViewController.swift */,
-				8A7BAFED289154C200CA4795 /* CustomTableViewCell.swift */,
-				7F735E99289021E1005F2D77 /* Model */,
+				8964E21A289168740016759B /* Views */,
+				8964E219289168620016759B /* View Controllers */,
+				8964E218289168590016759B /* Resources */,
+				8964E2172891683C0016759B /* Application */,
+				8964E216289168220016759B /* Storyboards */,
+				7F735E99289021E1005F2D77 /* Models */,
 			);
 			path = squidCount;
 			sourceTree = "<group>";
@@ -333,7 +373,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V2AAW35578;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = squidCount/Info.plist;
+				INFOPLIST_FILE = squidCount/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -361,7 +401,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V2AAW35578;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = squidCount/Info.plist;
+				INFOPLIST_FILE = squidCount/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
