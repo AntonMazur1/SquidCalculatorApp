@@ -11,13 +11,11 @@ class CreatorsListViewController: UITableViewController {
     
     private let creators = Creator.getEmployeDetails()
     
-
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         creators.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "creator") as? CustomTableViewCell else { return UITableViewCell() }
