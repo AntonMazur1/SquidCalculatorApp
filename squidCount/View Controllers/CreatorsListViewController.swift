@@ -15,11 +15,10 @@ class CreatorsListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         creators.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "creator") as? CustomTableViewCell else { return UITableViewCell() }
-        
         
         let creator = creators[indexPath.row]
         cell.avatarImage.image = UIImage(named: creator.photo)
@@ -28,5 +27,9 @@ class CreatorsListViewController: UITableViewController {
         cell.avatarImage.layer.cornerRadius = (cell.avatarImage.frame.size.height) / 2
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }
