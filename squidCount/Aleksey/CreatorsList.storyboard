@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Creators List-->
+        <!--Creators-->
         <scene sceneID="g1K-4i-cCw">
             <objects>
                 <tableViewController id="NT4-aW-JL8" customClass="CreatorsListViewController" customModule="squidCount" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,7 +71,7 @@
                             <outlet property="delegate" destination="NT4-aW-JL8" id="QW8-zl-91s"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Creators List" id="2mp-1f-9gt"/>
+                    <navigationItem key="navigationItem" title="Creators" id="2mp-1f-9gt"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEk-m0-0s0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -88,7 +88,7 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>

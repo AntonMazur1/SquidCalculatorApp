@@ -14,7 +14,9 @@ struct Creator {
     let photo: String
     
     var fullName: String {
+        
         name + " " + surname
+        
     }
     
     static func getEmployeDetails() -> [Creator] {
