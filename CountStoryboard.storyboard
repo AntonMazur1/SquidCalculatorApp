@@ -185,6 +185,7 @@
                         <outlet property="perimeterLabel" destination="gmd-6t-iZi" id="DxD-NX-zbS"/>
                         <outlet property="radiusTextFIeld" destination="9cc-ay-p7X" id="sq3-Ov-N1b"/>
                         <outlet property="rectangleParameters" destination="5Ww-lP-2j5" id="Iot-cg-hlZ"/>
+                        <outlet property="results" destination="Tqc-2q-9Ou" id="Jg6-D5-2X6"/>
                         <outlet property="sideOneTextField" destination="ivC-mi-zOC" id="Vp4-DS-fnA"/>
                         <outlet property="sideThreeTextField" destination="fcw-mQ-G2x" id="jXR-2p-MOJ"/>
                         <outlet property="sideTwoTextField" destination="Ld6-NC-GBf" id="BhK-z6-53g"/>

@@ -14,7 +14,7 @@ class CountViewController: UIViewController {
     @IBOutlet var perimeterLabel: UILabel!
     @IBOutlet var squareLabel: UILabel!
     
-
+    
     @IBOutlet var radiusTextFIeld: UITextField!
     
     @IBOutlet var heightTextField: UITextField!
@@ -29,8 +29,9 @@ class CountViewController: UIViewController {
     @IBOutlet var circleParameters: UIStackView!
     @IBOutlet var rectangleParameters: UIStackView!
     
-
-    var shape: Shape!
+    @IBOutlet var results: UIStackView!
+    
+    var shape: Shape = .triangle
     
     
     override func viewDidLoad() {
@@ -44,10 +45,37 @@ class CountViewController: UIViewController {
     }
     
     @IBAction func countButtonTapped() {
+        switch shape {
+        case .circle:
+            var figure = Circle.getCircle()
+            figure.radius = Double(radiusTextFIeld.text ?? "") ?? 0
+            
+            perimeterLabel.text = String(figure.perimeter)
+            squareLabel.text = String(figure.square)
+            
+        case .rectangle:
+            var figure = Rectangle.getRectangle()
+            figure.height = Double(heightTextField.text ?? "") ?? 0
+            figure.width = Double(widthTextField.text ?? "") ?? 0
+            
+            perimeterLabel.text = String(figure.perimeter)
+            squareLabel.text = String(figure.square)
+            
+        default:
+            var figure = Triangle.getTriangle()
+            figure.sideOne = Double(sideOneTextField.text ?? "") ?? 0
+            figure.sideTwo = Double(sideTwoTextField.text ?? "") ?? 0
+            figure.sideThree = Double(sideThreeTextField.text ?? "") ?? 0
+            
+            perimeterLabel.text = String(figure.perimeter)
+            squareLabel.text = String(figure.square)
+        }
         
+        results.isHidden = false
+        view.endEditing(true)
     }
     
-
+    
     func setupUI() {
         switch shape {
         case .circle:
@@ -69,4 +97,5 @@ class CountViewController: UIViewController {
             triangleParameters.isHidden.toggle()
         }
     }
+    
 }

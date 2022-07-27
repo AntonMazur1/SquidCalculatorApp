@@ -11,7 +11,7 @@ struct Circle {
     let name: String
     let imageName: String
     
-    let radius: Double
+    var radius: Double
     
     var square: Double {
         Double.pi * radius * radius
@@ -30,8 +30,8 @@ struct Rectangle {
     let name: String
     let imageName: String
     
-    let height: Double
-    let width: Double
+    var height: Double
+    var width: Double
     
     var square: Double {
         height * width
@@ -50,9 +50,9 @@ struct Triangle {
     let name: String
     let imageName: String
     
-    let sideOne: Double
-    let sideTwo: Double
-    let sideThree: Double
+    var sideOne: Double
+    var sideTwo: Double
+    var sideThree: Double
     
     var square: Double {
         let p = ( sideOne + sideTwo + sideThree ) / 2
