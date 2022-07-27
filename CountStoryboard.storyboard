@@ -21,7 +21,7 @@
                                     <constraint firstAttribute="height" constant="128" id="NzM-ul-nZb"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="kUu-B2-nZ0">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="kUu-B2-nZ0">
                                 <rect key="frame" x="16" y="168" width="343" height="178.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Side One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPo-Ml-StD">
@@ -179,18 +179,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="Nsa-lB-FUa"/>
                     <connections>
-                        <outlet property="circleParameters" destination="qiC-do-qrw" id="bXG-zE-Fhx"/>
+                        <outlet property="circleParameters" destination="qiC-do-qrw" id="TJX-F6-QNe"/>
                         <outlet property="figureImageView" destination="In3-bh-tik" id="hIq-uC-6nm"/>
-                        <outlet property="heightTextField" destination="W2b-9j-LHD" id="PsY-XJ-EGH"/>
+                        <outlet property="heightTextField" destination="W2b-9j-LHD" id="Ay8-IM-pAu"/>
                         <outlet property="perimeterLabel" destination="gmd-6t-iZi" id="DxD-NX-zbS"/>
-                        <outlet property="radiusTextField" destination="9cc-ay-p7X" id="2oh-kf-Geq"/>
-                        <outlet property="rectangleParameters" destination="5Ww-lP-2j5" id="dch-nD-SDn"/>
-                        <outlet property="sideOneTextField" destination="ivC-mi-zOC" id="don-i0-IP1"/>
-                        <outlet property="sideThreeTextField" destination="fcw-mQ-G2x" id="gTL-XD-i73"/>
-                        <outlet property="sideTwoTextField" destination="Ld6-NC-GBf" id="UhK-8N-yDi"/>
+                        <outlet property="radiusTextFIeld" destination="9cc-ay-p7X" id="sq3-Ov-N1b"/>
+                        <outlet property="rectangleParameters" destination="5Ww-lP-2j5" id="Iot-cg-hlZ"/>
+                        <outlet property="sideOneTextField" destination="ivC-mi-zOC" id="Vp4-DS-fnA"/>
+                        <outlet property="sideThreeTextField" destination="fcw-mQ-G2x" id="jXR-2p-MOJ"/>
+                        <outlet property="sideTwoTextField" destination="Ld6-NC-GBf" id="BhK-z6-53g"/>
                         <outlet property="squareLabel" destination="igM-FE-ZoV" id="kbz-PL-imX"/>
-                        <outlet property="triangleParameters" destination="kUu-B2-nZ0" id="aj1-w7-DwK"/>
-                        <outlet property="widthTextField" destination="7EH-0x-zqI" id="5oz-zy-vgF"/>
+                        <outlet property="triangleParameters" destination="kUu-B2-nZ0" id="CBH-CV-YNF"/>
+                        <outlet property="widthTextField" destination="7EH-0x-zqI" id="isr-wM-Bka"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
