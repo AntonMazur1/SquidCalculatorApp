@@ -18,7 +18,7 @@
 		8A7BAFF0289154DB00CA4795 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BAFED289154C200CA4795 /* CustomTableViewCell.swift */; };
 		8A7BAFF1289163D400CA4795 /* CreatorsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7BAFEB289154C200CA4795 /* CreatorsViewController.storyboard */; };
 		CE573F3B28929B6B000B8E4F /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573F3A28929B6B000B8E4F /* Struct.swift */; };
-		CEC8B3772892A48B001A2836 /* CountStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC8B3762892A48A001A2836 /* CountStoryboard.storyboard */; };
+		CEC8B3772892A48B001A2836 /* Count.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC8B3762892A48A001A2836 /* Count.storyboard */; };
 		CEC8B3792892A4A4001A2836 /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8B3782892A4A4001A2836 /* CountViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +36,7 @@
 		8A7BAFEC289154C200CA4795 /* CreatorsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorsListViewController.swift; sourceTree = "<group>"; };
 		8A7BAFED289154C200CA4795 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		CE573F3A28929B6B000B8E4F /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
-		CEC8B3762892A48A001A2836 /* CountStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CountStoryboard.storyboard; sourceTree = "<group>"; };
+		CEC8B3762892A48A001A2836 /* Count.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Count.storyboard; sourceTree = "<group>"; };
 		CEC8B3782892A4A4001A2836 /* CountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountViewController.swift; path = "squidCount/View Controllers/CountViewController.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -65,7 +65,7 @@
 			children = (
 				89B5249A289018B5001B417B /* Main.storyboard */,
 				8A7BAFEB289154C200CA4795 /* CreatorsViewController.storyboard */,
-				CEC8B3762892A48A001A2836 /* CountStoryboard.storyboard */,
+				CEC8B3762892A48A001A2836 /* Count.storyboard */,
 				89B5249F289018B6001B417B /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -196,7 +196,7 @@
 			files = (
 				89B524A1289018B6001B417B /* LaunchScreen.storyboard in Resources */,
 				8A7BAFF1289163D400CA4795 /* CreatorsViewController.storyboard in Resources */,
-				CEC8B3772892A48B001A2836 /* CountStoryboard.storyboard in Resources */,
+				CEC8B3772892A48B001A2836 /* Count.storyboard in Resources */,
 				89B5249E289018B6001B417B /* Assets.xcassets in Resources */,
 				89B5249C289018B5001B417B /* Main.storyboard in Resources */,
 			);
