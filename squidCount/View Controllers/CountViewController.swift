@@ -78,6 +78,8 @@ class CountViewController: UIViewController {
         
         results.isHidden = false
         view.endEditing(true)
+        
+        validateFields()
     }
     
     private func setupUI() {
