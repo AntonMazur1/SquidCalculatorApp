@@ -102,15 +102,40 @@ class CountViewController: UIViewController {
         }
         
     }
+    private func validateFields() {
+        for textField in textFields {
+            guard let _ = Double(String(textField.text ?? "")) else {
+                showAlert(with: "Wrong format", and: "Enter natural or decimal number")
+                return
+            }
+        }
+    }
+    
+    
+    private func showAlert(with title: String, and message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            for textField in self.textFields {
+                textField.text = ""
+            }
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
 }
+
 
 extension CountViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        if let _ = string.rangeOfCharacter(from: NSCharacterSet.decimalDigits) {
-            return true
-        } else {
-            return false
-        }
+        //
+        //        if let _ = string.rangeOfCharacter(from: NSCharacterSet.decimalDigits) {
+        //            return true
+        //        } else {
+        //            return false
+        //        }
+        return true
     }
+    
 }
+

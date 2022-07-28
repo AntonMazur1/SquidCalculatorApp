@@ -22,7 +22,7 @@ struct Circle {
     }
     
     static func getCircle() -> Circle {
-        Circle(name: "Circle", imageName: "Circle", radius: 0)
+        Circle(name: "Circle", imageName: "circle", radius: 0)
     }
 }
 
@@ -42,7 +42,7 @@ struct Rectangle {
     }
     
     static func getRectangle() -> Rectangle {
-        Rectangle(name: "Rectangle", imageName: "Rectangle", height: 0, width: 0)
+        Rectangle(name: "Rectangle", imageName: "rectangle", height: 0, width: 0)
     }
 }
 
@@ -64,7 +64,7 @@ struct Triangle {
     }
     
     static func getTriangle() -> Triangle {
-        Triangle(name: "Triangle", imageName: "Triangle", sideOne: 0, sideTwo: 0, sideThree: 0)
+        Triangle(name: "Triangle", imageName: "triangle", sideOne: 0, sideTwo: 0, sideThree: 0)
     }
 
 }
