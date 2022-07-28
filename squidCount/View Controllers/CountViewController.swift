@@ -78,8 +78,6 @@ class CountViewController: UIViewController {
         
         results.isHidden = false
         view.endEditing(true)
-        
-        validateFields()
     }
     
     private func setupUI() {
@@ -104,13 +102,6 @@ class CountViewController: UIViewController {
         }
         
     }
-    private func validateFields() {
-        for textField in textFields {
-            guard let value = Double(String(textField.text ?? "")) else { return }
-            
-        }
-    }
-    
     
     private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -125,17 +116,14 @@ class CountViewController: UIViewController {
     
 }
 
-
 extension CountViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        //
-        //        if let _ = string.rangeOfCharacter(from: NSCharacterSet.decimalDigits) {
-        //            return true
-        //        } else {
-        //            return false
-        //        }
+        if textField.text != "" || string != "" {
+            let value = (textField.text ?? "") + string
+            return Double(value) != nil
+        }
         return true
     }
-    
 }
+
 
