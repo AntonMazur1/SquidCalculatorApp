@@ -19,11 +19,11 @@
                                 <rect key="frame" x="16" y="160" width="382" height="682"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nC8-Eu-w7U">
-                                        <rect key="frame" x="98" y="0.0" width="186" height="218.5"/>
+                                        <rect key="frame" x="95" y="0.0" width="192" height="218.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="circle"/>
                                         <connections>
-                                            <segue destination="v3f-NU-PvP" kind="show" identifier="circle" id="Ij1-aE-gGr"/>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="beh-x8-BbW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Viv-eI-r7j">
@@ -31,15 +31,15 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="triangle"/>
                                         <connections>
-                                            <segue destination="v3f-NU-PvP" kind="show" identifier="triangle" id="faD-VU-PI0"/>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gIE-w9-VY6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="za1-Qb-0Eb">
-                                        <rect key="frame" x="98" y="463.5" width="186" height="218.5"/>
+                                        <rect key="frame" x="95" y="463.5" width="192" height="218.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="rectangle"/>
                                         <connections>
-                                            <segue destination="v3f-NU-PvP" kind="show" identifier="rectangle" id="onc-Jf-jJp"/>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9U-ql-Neh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -62,6 +62,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outletCollection property="buttons" destination="nC8-Eu-w7U" collectionClass="NSMutableArray" id="MyZ-Yi-DPD"/>
+                        <outletCollection property="buttons" destination="Viv-eI-r7j" collectionClass="NSMutableArray" id="czS-I2-vgF"/>
+                        <outletCollection property="buttons" destination="za1-Qb-0Eb" collectionClass="NSMutableArray" id="VHz-vS-zH0"/>
+                        <segue destination="v3f-NU-PvP" kind="show" identifier="showCountVC" id="6xe-CF-DWb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,7 +81,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2j0-1z-8q0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1718" y="-320"/>
+            <point key="canvasLocation" x="1717" y="-172"/>
         </scene>
         <!--1-->
         <scene sceneID="bdl-M3-XVD">
@@ -85,7 +91,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97I-7b-PJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1726" y="-116"/>
+            <point key="canvasLocation" x="1717" y="284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ObI-JQ-1Bl">
@@ -109,12 +115,9 @@
             <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="onc-Jf-jJp"/>
-    </inferredMetricsTieBreakers>
     <resources>
-        <image name="circle" width="162" height="162"/>
-        <image name="rectangle" width="162" height="162"/>
+        <image name="circle" width="168" height="168"/>
+        <image name="rectangle" width="168" height="168"/>
         <image name="triangle" width="168" height="168"/>
     </resources>
 </document>

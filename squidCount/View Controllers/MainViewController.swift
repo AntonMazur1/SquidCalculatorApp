@@ -9,19 +9,32 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    @IBOutlet var buttons: [UIButton]!
+    
+    var figure: Any = ""
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        guard let buttonIndex = buttons.firstIndex(of: sender) else { return }
+        switch buttonIndex {
+        case 0:
+            figure = Circle.getCircleData()
+        case 1:
+            figure = Triangle.getTriangleData()
+        case 2:
+            figure = Rectangle.getRectangleData()
+        default:
+            return
+        }
+        showNextVC()
+    }
+    
+    private func showNextVC() {
+        performSegue(withIdentifier: "showCountVC", sender: nil)
+    }
+    
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "circle" {
-//            let squarePerimeterVC = segue.destination as! CountViewController
-//            squarePerimeterVC.figure = Circle.getCircleData()
-//        } else if segue.identifier == "triangle" {
-//            let squarePerimeterVC = segue.destination as! CountViewController
-//            squarePerimeterVC.figure = Triangle.getTriangleData().name
-//        } else if segue.identifier == "rectangle" {
-//            let squarePerimeterVC = segue.destination as! CountViewController
-//            squarePerimeterVC.figure = Rectangle.getRectangleData()
-//        } else {
-//            return
-//        }
+//        guard let countVC = segue.destination as! CountViewController else { return }
+//        countVC.figure = figure
 //    }
 }
 
