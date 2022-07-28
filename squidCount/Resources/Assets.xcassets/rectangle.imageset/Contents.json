@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Square_photo-resizer.ru.png",
+      "filename" : "Square_photo-resizer.ru_photo-resizer.ru.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -17,5 +17,8 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "localizable" : true
   }
 }
