@@ -17,9 +17,9 @@
 		8A7BAFEF289154DA00CA4795 /* CreatorsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BAFEC289154C200CA4795 /* CreatorsListViewController.swift */; };
 		8A7BAFF0289154DB00CA4795 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BAFED289154C200CA4795 /* CustomTableViewCell.swift */; };
 		8A7BAFF1289163D400CA4795 /* CreatorsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7BAFEB289154C200CA4795 /* CreatorsViewController.storyboard */; };
-		CE573F3728929AD1000B8E4F /* CountStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE573F3428929AD1000B8E4F /* CountStoryboard.storyboard */; };
-		CE573F3828929AD1000B8E4F /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573F3528929AD1000B8E4F /* CountViewController.swift */; };
 		CE573F3B28929B6B000B8E4F /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573F3A28929B6B000B8E4F /* Struct.swift */; };
+		CEC8B3772892A48B001A2836 /* CountStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC8B3762892A48A001A2836 /* CountStoryboard.storyboard */; };
+		CEC8B3792892A4A4001A2836 /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8B3782892A4A4001A2836 /* CountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +35,9 @@
 		8A7BAFEB289154C200CA4795 /* CreatorsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreatorsViewController.storyboard; sourceTree = "<group>"; };
 		8A7BAFEC289154C200CA4795 /* CreatorsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorsListViewController.swift; sourceTree = "<group>"; };
 		8A7BAFED289154C200CA4795 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		CE573F3428929AD1000B8E4F /* CountStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CountStoryboard.storyboard; path = ../../../../Desktop/CountStoryboard.storyboard; sourceTree = "<group>"; };
-		CE573F3528929AD1000B8E4F /* CountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountViewController.swift; path = ../../../../Desktop/CountViewController.swift; sourceTree = "<group>"; };
 		CE573F3A28929B6B000B8E4F /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
+		CEC8B3762892A48A001A2836 /* CountStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CountStoryboard.storyboard; sourceTree = "<group>"; };
+		CEC8B3782892A4A4001A2836 /* CountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountViewController.swift; path = "squidCount/View Controllers/CountViewController.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +65,7 @@
 			children = (
 				89B5249A289018B5001B417B /* Main.storyboard */,
 				8A7BAFEB289154C200CA4795 /* CreatorsViewController.storyboard */,
+				CEC8B3762892A48A001A2836 /* CountStoryboard.storyboard */,
 				89B5249F289018B6001B417B /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -91,9 +92,8 @@
 		8964E219289168620016759B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CEC8B3782892A4A4001A2836 /* CountViewController.swift */,
 				89B52498289018B5001B417B /* MainViewController.swift */,
-				CE573F3428929AD1000B8E4F /* CountStoryboard.storyboard */,
-				CE573F3528929AD1000B8E4F /* CountViewController.swift */,
 				8A7BAFEC289154C200CA4795 /* CreatorsListViewController.swift */,
 			);
 			path = "View Controllers";
@@ -196,9 +196,9 @@
 			files = (
 				89B524A1289018B6001B417B /* LaunchScreen.storyboard in Resources */,
 				8A7BAFF1289163D400CA4795 /* CreatorsViewController.storyboard in Resources */,
+				CEC8B3772892A48B001A2836 /* CountStoryboard.storyboard in Resources */,
 				89B5249E289018B6001B417B /* Assets.xcassets in Resources */,
 				89B5249C289018B5001B417B /* Main.storyboard in Resources */,
-				CE573F3728929AD1000B8E4F /* CountStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,9 +211,9 @@
 			files = (
 				CE573F3B28929B6B000B8E4F /* Struct.swift in Sources */,
 				8A7BAFEE289154D700CA4795 /* Creator.swift in Sources */,
-				CE573F3828929AD1000B8E4F /* CountViewController.swift in Sources */,
 				8A7BAFEF289154DA00CA4795 /* CreatorsListViewController.swift in Sources */,
 				89B52499289018B5001B417B /* MainViewController.swift in Sources */,
+				CEC8B3792892A4A4001A2836 /* CountViewController.swift in Sources */,
 				8A7BAFF0289154DB00CA4795 /* CustomTableViewCell.swift in Sources */,
 				89B52495289018B5001B417B /* AppDelegate.swift in Sources */,
 				89B52497289018B5001B417B /* SceneDelegate.swift in Sources */,
