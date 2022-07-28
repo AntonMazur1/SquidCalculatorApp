@@ -16,7 +16,7 @@
 		8A7BAFEE289154D700CA4795 /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BAFEA289154C200CA4795 /* Creator.swift */; };
 		8A7BAFEF289154DA00CA4795 /* CreatorsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BAFEC289154C200CA4795 /* CreatorsListViewController.swift */; };
 		8A7BAFF0289154DB00CA4795 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BAFED289154C200CA4795 /* CustomTableViewCell.swift */; };
-		8A7BAFF1289163D400CA4795 /* CreatorsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7BAFEB289154C200CA4795 /* CreatorsViewController.storyboard */; };
+		8A7BAFF1289163D400CA4795 /* CreatorsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7BAFEB289154C200CA4795 /* CreatorsList.storyboard */; };
 		CE573F3B28929B6B000B8E4F /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573F3A28929B6B000B8E4F /* Struct.swift */; };
 		CEC8B3772892A48B001A2836 /* CountStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC8B3762892A48A001A2836 /* CountStoryboard.storyboard */; };
 		CEC8B3792892A4A4001A2836 /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8B3782892A4A4001A2836 /* CountViewController.swift */; };
@@ -32,7 +32,7 @@
 		89B524A0289018B6001B417B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89B524A2289018B6001B417B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A7BAFEA289154C200CA4795 /* Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creator.swift; sourceTree = "<group>"; };
-		8A7BAFEB289154C200CA4795 /* CreatorsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreatorsViewController.storyboard; sourceTree = "<group>"; };
+		8A7BAFEB289154C200CA4795 /* CreatorsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreatorsList.storyboard; sourceTree = "<group>"; };
 		8A7BAFEC289154C200CA4795 /* CreatorsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorsListViewController.swift; sourceTree = "<group>"; };
 		8A7BAFED289154C200CA4795 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		CE573F3A28929B6B000B8E4F /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				89B5249A289018B5001B417B /* Main.storyboard */,
-				8A7BAFEB289154C200CA4795 /* CreatorsViewController.storyboard */,
+				8A7BAFEB289154C200CA4795 /* CreatorsList.storyboard */,
 				CEC8B3762892A48A001A2836 /* CountStoryboard.storyboard */,
 				89B5249F289018B6001B417B /* LaunchScreen.storyboard */,
 			);
@@ -195,7 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89B524A1289018B6001B417B /* LaunchScreen.storyboard in Resources */,
-				8A7BAFF1289163D400CA4795 /* CreatorsViewController.storyboard in Resources */,
+				8A7BAFF1289163D400CA4795 /* CreatorsList.storyboard in Resources */,
 				CEC8B3772892A48B001A2836 /* CountStoryboard.storyboard in Resources */,
 				89B5249E289018B6001B417B /* Assets.xcassets in Resources */,
 				89B5249C289018B5001B417B /* Main.storyboard in Resources */,
