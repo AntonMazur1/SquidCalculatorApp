@@ -55,16 +55,16 @@ class CountViewController: UIViewController {
             var figure = Circle.getCircle()
             figure.radius = Double(radiusTextField.text ?? "") ?? 0
             
-            perimeterLabel.text = String(figure.perimeter)
-            squareLabel.text = String(figure.square)
+            perimeterLabel.text = String(format: "%.2f", figure.perimeter)
+            squareLabel.text = String(format: "%.2f", figure.square)
             
         case .rectangle:
             var figure = Rectangle.getRectangle()
             figure.height = Double(heightTextField.text ?? "") ?? 0
             figure.width = Double(widthTextField.text ?? "") ?? 0
             
-            perimeterLabel.text = String(figure.perimeter)
-            squareLabel.text = String(figure.square)
+            perimeterLabel.text = String(format: "%.2f", figure.perimeter)
+            squareLabel.text = String(format: "%.2f", figure.square)
             
         default:
             var figure = Triangle.getTriangle()
@@ -72,8 +72,8 @@ class CountViewController: UIViewController {
             figure.sideTwo = Double(sideTwoTextField.text ?? "") ?? 0
             figure.sideThree = Double(sideThreeTextField.text ?? "") ?? 0
             
-            perimeterLabel.text = String(format: "%.3f", figure.perimeter)
-            squareLabel.text = String(format: "%.3f", figure.square)
+            perimeterLabel.text = String(format: "%.2f", figure.perimeter)
+            squareLabel.text = String(format: "%.2f", figure.square)
         }
         
         results.isHidden = false
