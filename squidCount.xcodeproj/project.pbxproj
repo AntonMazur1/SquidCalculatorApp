@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F735E9B289045E6005F2D77 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F735E9A289045E6005F2D77 /* Rectangle.swift */; };
-		7F735E9D2890809F005F2D77 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F735E9C2890809F005F2D77 /* Triangle.swift */; };
-		7F735E9F289083CC005F2D77 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F735E9E289083CC005F2D77 /* Circle.swift */; };
 		89B52495289018B5001B417B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B52494289018B5001B417B /* AppDelegate.swift */; };
 		89B52497289018B5001B417B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B52496289018B5001B417B /* SceneDelegate.swift */; };
 		89B52499289018B5001B417B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B52498289018B5001B417B /* MainViewController.swift */; };
@@ -20,14 +17,12 @@
 		8A7BAFEF289154DA00CA4795 /* CreatorsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BAFEC289154C200CA4795 /* CreatorsListViewController.swift */; };
 		8A7BAFF0289154DB00CA4795 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BAFED289154C200CA4795 /* CustomTableViewCell.swift */; };
 		8A7BAFF1289163D400CA4795 /* CreatorsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7BAFEB289154C200CA4795 /* CreatorsViewController.storyboard */; };
-		CE573F2B28911659000B8E4F /* CountStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE573F2A28911659000B8E4F /* CountStoryboard.storyboard */; };
-		CE573F2D28911694000B8E4F /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573F2C28911694000B8E4F /* CountViewController.swift */; };
+		CE573F3728929AD1000B8E4F /* CountStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE573F3428929AD1000B8E4F /* CountStoryboard.storyboard */; };
+		CE573F3828929AD1000B8E4F /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573F3528929AD1000B8E4F /* CountViewController.swift */; };
+		CE573F3B28929B6B000B8E4F /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573F3A28929B6B000B8E4F /* Struct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7F735E9A289045E6005F2D77 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
-		7F735E9C2890809F005F2D77 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
-		7F735E9E289083CC005F2D77 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 		89B52491289018B5001B417B /* squidCount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = squidCount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B52494289018B5001B417B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89B52496289018B5001B417B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,8 +35,9 @@
 		8A7BAFEB289154C200CA4795 /* CreatorsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreatorsViewController.storyboard; sourceTree = "<group>"; };
 		8A7BAFEC289154C200CA4795 /* CreatorsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorsListViewController.swift; sourceTree = "<group>"; };
 		8A7BAFED289154C200CA4795 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		CE573F2A28911659000B8E4F /* CountStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = CountStoryboard.storyboard; path = squidCount/Storyboards/CountStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
-		CE573F2C28911694000B8E4F /* CountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountViewController.swift; sourceTree = "<group>"; };
+		CE573F3428929AD1000B8E4F /* CountStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CountStoryboard.storyboard; path = ../../../../Desktop/CountStoryboard.storyboard; sourceTree = "<group>"; };
+		CE573F3528929AD1000B8E4F /* CountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountViewController.swift; path = ../../../../Desktop/CountViewController.swift; sourceTree = "<group>"; };
+		CE573F3A28929B6B000B8E4F /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +54,8 @@
 		7F735E99289021E1005F2D77 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE573F3A28929B6B000B8E4F /* Struct.swift */,
 				8A7BAFEA289154C200CA4795 /* Creator.swift */,
-				7F735E9A289045E6005F2D77 /* Rectangle.swift */,
-				7F735E9C2890809F005F2D77 /* Triangle.swift */,
-				7F735E9E289083CC005F2D77 /* Circle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -70,7 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				89B5249A289018B5001B417B /* Main.storyboard */,
-				CE573F2A28911659000B8E4F /* CountStoryboard.storyboard */,
 				8A7BAFEB289154C200CA4795 /* CreatorsViewController.storyboard */,
 				89B5249F289018B6001B417B /* LaunchScreen.storyboard */,
 			);
@@ -99,7 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				89B52498289018B5001B417B /* MainViewController.swift */,
-				CE573F2C28911694000B8E4F /* CountViewController.swift */,
+				CE573F3428929AD1000B8E4F /* CountStoryboard.storyboard */,
+				CE573F3528929AD1000B8E4F /* CountViewController.swift */,
 				8A7BAFEC289154C200CA4795 /* CreatorsListViewController.swift */,
 			);
 			path = "View Controllers";
@@ -204,7 +198,7 @@
 				8A7BAFF1289163D400CA4795 /* CreatorsViewController.storyboard in Resources */,
 				89B5249E289018B6001B417B /* Assets.xcassets in Resources */,
 				89B5249C289018B5001B417B /* Main.storyboard in Resources */,
-				CE573F2B28911659000B8E4F /* CountStoryboard.storyboard in Resources */,
+				CE573F3728929AD1000B8E4F /* CountStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,15 +209,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE573F3B28929B6B000B8E4F /* Struct.swift in Sources */,
 				8A7BAFEE289154D700CA4795 /* Creator.swift in Sources */,
-				7F735E9F289083CC005F2D77 /* Circle.swift in Sources */,
+				CE573F3828929AD1000B8E4F /* CountViewController.swift in Sources */,
 				8A7BAFEF289154DA00CA4795 /* CreatorsListViewController.swift in Sources */,
-				7F735E9B289045E6005F2D77 /* Rectangle.swift in Sources */,
 				89B52499289018B5001B417B /* MainViewController.swift in Sources */,
-				7F735E9D2890809F005F2D77 /* Triangle.swift in Sources */,
 				8A7BAFF0289154DB00CA4795 /* CustomTableViewCell.swift in Sources */,
 				89B52495289018B5001B417B /* AppDelegate.swift in Sources */,
-				CE573F2D28911694000B8E4F /* CountViewController.swift in Sources */,
 				89B52497289018B5001B417B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
