@@ -72,8 +72,8 @@ class CountViewController: UIViewController {
             figure.sideTwo = Double(sideTwoTextField.text ?? "") ?? 0
             figure.sideThree = Double(sideThreeTextField.text ?? "") ?? 0
             
-            perimeterLabel.text = String(figure.perimeter)
-            squareLabel.text = String(figure.square)
+            perimeterLabel.text = String(format: "%.3f", figure.perimeter)
+            squareLabel.text = String(format: "%.3f", figure.square)
         }
         
         results.isHidden = false
@@ -106,10 +106,8 @@ class CountViewController: UIViewController {
     }
     private func validateFields() {
         for textField in textFields {
-            guard let _ = Double(String(textField.text ?? "")) else {
-                showAlert(with: "Wrong format", and: "Enter natural or decimal number")
-                return
-            }
+            guard let value = Double(String(textField.text ?? "")) else { return }
+            
         }
     }
     
