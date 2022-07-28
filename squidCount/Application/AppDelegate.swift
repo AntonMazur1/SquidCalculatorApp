@@ -13,7 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let backImage = UIImage(systemName: "arrowshape.turn.up.left")
+        UINavigationBar.appearance().tintColor = #colorLiteral(red: 0.9297947288, green: 0.1612575948, blue: 0.4672027826, alpha: 1)
+        UINavigationBar.appearance().backIndicatorImage = backImage
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = backImage
         return true
     }
 
