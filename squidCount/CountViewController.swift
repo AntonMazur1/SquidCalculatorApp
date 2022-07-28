@@ -30,12 +30,18 @@ class CountViewController: UIViewController {
     
     @IBOutlet var results: UIStackView!
     
-    var shape: Shape = .triangle
-    
+    var shape: Shape = .circle
+    var textFields: [UITextField] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupUI()
+        
+        textFields = [radiusTextField, widthTextField, heightTextField, sideOneTextField, sideTwoTextField, sideThreeTextField]
+        for textField in textFields {
+            textField.delegate = self
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -74,8 +80,7 @@ class CountViewController: UIViewController {
         view.endEditing(true)
     }
     
-    
-    func setupUI() {
+    private func setupUI() {
         switch shape {
         case .circle:
             let figure = Circle.getCircle()
@@ -95,6 +100,17 @@ class CountViewController: UIViewController {
             figureImageView.image = UIImage(named: figure.imageName)
             triangleParameters.isHidden.toggle()
         }
+        
     }
-    
+}
+
+extension CountViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if let x = string.rangeOfCharacter(from: NSCharacterSet.decimalDigits) {
+            return true
+        } else {
+            return false
+        }
+    }
 }
