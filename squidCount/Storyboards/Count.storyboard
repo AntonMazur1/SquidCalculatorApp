@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Aleksey" translatesAutoresizingMaskIntoConstraints="NO" id="In3-bh-tik">
-                                <rect key="frame" x="16" y="20" width="343" height="128"/>
+                                <rect key="frame" x="16" y="20" width="343" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="NzM-ul-nZb"/>
+                                    <constraint firstAttribute="height" constant="64" id="NzM-ul-nZb"/>
                                 </constraints>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                             </imageView>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="kUu-B2-nZ0">
-                                <rect key="frame" x="16" y="168" width="343" height="178.5"/>
+                                <rect key="frame" x="16" y="104" width="343" height="178.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Side One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPo-Ml-StD">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -106,7 +106,7 @@
                                 </subviews>
                             </stackView>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qiC-do-qrw">
-                                <rect key="frame" x="16" y="168" width="343" height="59.5"/>
+                                <rect key="frame" x="16" y="104" width="343" height="59.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo3-V9-Cvz">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -122,7 +122,7 @@
                                 </subviews>
                             </stackView>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="5Ww-lP-2j5">
-                                <rect key="frame" x="16" y="168" width="343" height="118"/>
+                                <rect key="frame" x="16" y="104" width="343" height="118"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8S-NM-tXA">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -149,7 +149,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Count" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufd-HR-owa">
-                                <rect key="frame" x="16" y="398" width="343" height="113"/>
+                                <rect key="frame" x="16" y="284" width="343" height="31"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Count"/>
@@ -169,11 +169,10 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="In3-bh-tik" secondAttribute="trailing" constant="16" id="5vO-eb-kSS"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qiC-do-qrw" secondAttribute="trailing" constant="16" id="6df-lL-GHY"/>
                             <constraint firstItem="Tqc-2q-9Ou" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="8dw-Ym-nZC"/>
-                            <constraint firstItem="Tqc-2q-9Ou" firstAttribute="top" secondItem="ufd-HR-owa" secondAttribute="bottom" constant="40" id="8ut-fs-fK8"/>
                             <constraint firstItem="kUu-B2-nZ0" firstAttribute="top" secondItem="In3-bh-tik" secondAttribute="bottom" constant="20" id="Eqv-5v-gcG"/>
-                            <constraint firstItem="ufd-HR-owa" firstAttribute="top" relation="lessThanOrEqual" secondItem="In3-bh-tik" secondAttribute="bottom" constant="250" id="fJX-WM-q6u"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5Ww-lP-2j5" secondAttribute="trailing" constant="16" id="j4j-VB-fkp"/>
                             <constraint firstItem="qiC-do-qrw" firstAttribute="top" secondItem="In3-bh-tik" secondAttribute="bottom" constant="20" id="lpP-ka-zfy"/>
+                            <constraint firstItem="ufd-HR-owa" firstAttribute="top" secondItem="In3-bh-tik" secondAttribute="bottom" constant="200" id="mXW-mz-OvQ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Tqc-2q-9Ou" secondAttribute="trailing" constant="16" id="p4W-g6-xzr"/>
                             <constraint firstItem="In3-bh-tik" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="q3B-Ey-dcT"/>
                             <constraint firstItem="5Ww-lP-2j5" firstAttribute="top" secondItem="In3-bh-tik" secondAttribute="bottom" constant="20" id="sJN-9H-Nub"/>

@@ -55,16 +55,16 @@ class CountViewController: UIViewController {
             var figure = Circle.getCircle()
             figure.radius = Double(radiusTextField.text ?? "") ?? 0
             
-            perimeterLabel.text = String(figure.perimeter)
-            squareLabel.text = String(figure.square)
+            perimeterLabel.text = String(format: "%.2f", figure.perimeter)
+            squareLabel.text = String(format: "%.2f", figure.square)
             
         case .rectangle:
             var figure = Rectangle.getRectangle()
             figure.height = Double(heightTextField.text ?? "") ?? 0
             figure.width = Double(widthTextField.text ?? "") ?? 0
             
-            perimeterLabel.text = String(figure.perimeter)
-            squareLabel.text = String(figure.square)
+            perimeterLabel.text = String(format: "%.2f", figure.perimeter)
+            squareLabel.text = String(format: "%.2f", figure.square)
             
         default:
             var figure = Triangle.getTriangle()
@@ -72,14 +72,12 @@ class CountViewController: UIViewController {
             figure.sideTwo = Double(sideTwoTextField.text ?? "") ?? 0
             figure.sideThree = Double(sideThreeTextField.text ?? "") ?? 0
             
-            perimeterLabel.text = String(figure.perimeter)
-            squareLabel.text = String(figure.square)
+            perimeterLabel.text = String(format: "%.2f", figure.perimeter)
+            squareLabel.text = String(format: "%.2f", figure.square)
         }
         
         results.isHidden = false
         view.endEditing(true)
-        
-        validateFields()
     }
     
     private func setupUI() {
@@ -104,15 +102,6 @@ class CountViewController: UIViewController {
         }
         
     }
-    private func validateFields() {
-        for textField in textFields {
-            guard let _ = Double(String(textField.text ?? "")) else {
-                showAlert(with: "Wrong format", and: "Enter natural or decimal number")
-                return
-            }
-        }
-    }
-    
     
     private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -127,17 +116,14 @@ class CountViewController: UIViewController {
     
 }
 
-
 extension CountViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        //
-        //        if let _ = string.rangeOfCharacter(from: NSCharacterSet.decimalDigits) {
-        //            return true
-        //        } else {
-        //            return false
-        //        }
+        if textField.text != "" || string != "" {
+            let value = (textField.text ?? "") + string
+            return Double(value) != nil
+        }
         return true
     }
-    
 }
+
 
