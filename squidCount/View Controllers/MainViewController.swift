@@ -11,17 +11,17 @@ class MainViewController: UIViewController {
     
     @IBOutlet var buttons: [UIButton]!
     
-    var figure: Any = ""
+    var figure: Shape!
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         guard let buttonIndex = buttons.firstIndex(of: sender) else { return }
         switch buttonIndex {
         case 0:
-            figure = Circle.getCircleData()
+            figure = Shape.circle
         case 1:
-            figure = Triangle.getTriangleData()
+            figure = Shape.triangle
         case 2:
-            figure = Rectangle.getRectangleData()
+            figure = Shape.rectangle
         default:
             return
         }
@@ -32,9 +32,9 @@ class MainViewController: UIViewController {
         performSegue(withIdentifier: "showCountVC", sender: nil)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let countVC = segue.destination as! CountViewController else { return }
-//        countVC.figure = figure
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let countVC = segue.destination as? CountViewController else { return }
+        countVC.shape = figure
+    }
 }
 
