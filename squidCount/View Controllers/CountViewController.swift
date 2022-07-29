@@ -31,13 +31,12 @@ class CountViewController: UIViewController {
     @IBOutlet var results: UIStackView!
     
     var shape: Shape!
-    var textFields: [UITextField] = []
+    private var textFields: [UITextField] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
-        
         textFields = [radiusTextField, widthTextField, heightTextField, sideOneTextField, sideTwoTextField, sideThreeTextField]
         for textField in textFields {
             textField.delegate = self
@@ -54,10 +53,8 @@ class CountViewController: UIViewController {
         case .circle:
             var figure = Circle.getCircle()
             figure.radius = Double(radiusTextField.text ?? "") ?? 0
-            
             perimeterLabel.text = String(format: "%.2f", figure.perimeter)
             squareLabel.text = String(format: "%.2f", figure.square)
-            
         case .rectangle:
             var figure = Rectangle.getRectangle()
             figure.height = Double(heightTextField.text ?? "") ?? 0
@@ -65,7 +62,6 @@ class CountViewController: UIViewController {
             
             perimeterLabel.text = String(format: "%.2f", figure.perimeter)
             squareLabel.text = String(format: "%.2f", figure.square)
-            
         default:
             var figure = Triangle.getTriangle()
             figure.sideOne = Double(sideOneTextField.text ?? "") ?? 0
@@ -75,7 +71,6 @@ class CountViewController: UIViewController {
             perimeterLabel.text = String(format: "%.2f", figure.perimeter)
             squareLabel.text = String(format: "%.2f", figure.square)
         }
-        
         results.isHidden = false
         view.endEditing(true)
     }
@@ -100,7 +95,6 @@ class CountViewController: UIViewController {
             figureImageView.image = UIImage(named: figure.imageName)
             triangleParameters.isHidden.toggle()
         }
-        
     }
     
     private func showAlert(with title: String, and message: String) {
@@ -114,6 +108,9 @@ class CountViewController: UIViewController {
         present(alert, animated: true)
     }
     
+    @objc func doneButtonTapped() {
+        view.endEditing(true)
+    }
 }
 
 extension CountViewController: UITextFieldDelegate {
@@ -123,6 +120,21 @@ extension CountViewController: UITextFieldDelegate {
             return Double(value) != nil
         }
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let keyboardToolBar = UIToolbar()
+        keyboardToolBar.sizeToFit()
+        textField.inputAccessoryView = keyboardToolBar
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done,
+                                         target: self,
+                                         action: #selector(doneButtonTapped))
+        
+        let flexSpacingItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                              target: nil,
+                                              action: nil)
+        
+        keyboardToolBar.items = [flexSpacingItem, doneButton]
     }
 }
 
