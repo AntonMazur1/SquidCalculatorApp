@@ -52,27 +52,35 @@ class CountViewController: UIViewController {
         switch shape {
         case .circle:
             var figure = Circle.getCircle()
-            figure.radius = Double(radiusTextField.text ?? "") ?? 0
-            perimeterLabel.text = String(format: "%.2f", figure.perimeter)
-            squareLabel.text = String(format: "%.2f", figure.square)
+            if checkTextFields(radiusTextField) == false {
+                figure.radius = Double(radiusTextField.text ?? "") ?? 0
+                perimeterLabel.text = String(format: "%.2f", figure.perimeter)
+                squareLabel.text = String(format: "%.2f", figure.square)
+                results.isHidden = false
+                view.endEditing(true)
+            }
         case .rectangle:
             var figure = Rectangle.getRectangle()
-            figure.height = Double(heightTextField.text ?? "") ?? 0
-            figure.width = Double(widthTextField.text ?? "") ?? 0
-            
-            perimeterLabel.text = String(format: "%.2f", figure.perimeter)
-            squareLabel.text = String(format: "%.2f", figure.square)
+            if checkTextFields(heightTextField, widthTextField) == false {
+                figure.height = Double(heightTextField.text ?? "") ?? 0
+                figure.width = Double(widthTextField.text ?? "") ?? 0
+                perimeterLabel.text = String(format: "%.2f", figure.perimeter)
+                squareLabel.text = String(format: "%.2f", figure.square)
+                results.isHidden = false
+                view.endEditing(true)
+            }
         default:
             var figure = Triangle.getTriangle()
-            figure.sideOne = Double(sideOneTextField.text ?? "") ?? 0
-            figure.sideTwo = Double(sideTwoTextField.text ?? "") ?? 0
-            figure.sideThree = Double(sideThreeTextField.text ?? "") ?? 0
-            
-            perimeterLabel.text = String(format: "%.2f", figure.perimeter)
-            squareLabel.text = String(format: "%.2f", figure.square)
+            if checkTextFields(sideOneTextField, sideTwoTextField, sideThreeTextField) == false {
+                figure.sideOne = Double(sideOneTextField.text ?? "") ?? 0
+                figure.sideTwo = Double(sideTwoTextField.text ?? "") ?? 0
+                figure.sideThree = Double(sideThreeTextField.text ?? "") ?? 0
+                perimeterLabel.text = String(format: "%.2f", figure.perimeter)
+                squareLabel.text = String(format: "%.2f", figure.square)
+                results.isHidden = false
+                view.endEditing(true)
+            }
         }
-        results.isHidden = false
-        view.endEditing(true)
     }
     
     private func setupUI() {
@@ -95,6 +103,17 @@ class CountViewController: UIViewController {
             figureImageView.image = UIImage(named: figure.imageName)
             triangleParameters.isHidden.toggle()
         }
+    }
+    
+    private func checkTextFields(_ textFields: UITextField...) -> Bool {
+        for textField in textFields {
+            if textField.text!.isEmpty {
+                showAlert(with: "Wrong value", and: "Enter the correct value")
+                return true
+            }
+        }
+        
+        return false
     }
     
     private func showAlert(with title: String, and message: String) {
