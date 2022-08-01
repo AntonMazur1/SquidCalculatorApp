@@ -66,7 +66,6 @@ struct Triangle {
     static func getTriangle() -> Triangle {
         Triangle(name: "Triangle", imageName: "triangle", sideOne: 0, sideTwo: 0, sideThree: 0)
     }
-
 }
 
 enum Shape {
