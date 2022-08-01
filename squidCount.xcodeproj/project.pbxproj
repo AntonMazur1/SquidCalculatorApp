@@ -17,7 +17,7 @@
 		8A7BAFEF289154DA00CA4795 /* CreatorsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BAFEC289154C200CA4795 /* CreatorsListViewController.swift */; };
 		8A7BAFF0289154DB00CA4795 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BAFED289154C200CA4795 /* CustomTableViewCell.swift */; };
 		8A7BAFF1289163D400CA4795 /* CreatorsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7BAFEB289154C200CA4795 /* CreatorsList.storyboard */; };
-		CE573F3B28929B6B000B8E4F /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573F3A28929B6B000B8E4F /* Struct.swift */; };
+		CE573F3B28929B6B000B8E4F /* CircleStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573F3A28929B6B000B8E4F /* CircleStruct.swift */; };
 		CEC8B3772892A48B001A2836 /* Count.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC8B3762892A48A001A2836 /* Count.storyboard */; };
 		CEC8B3792892A4A4001A2836 /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8B3782892A4A4001A2836 /* CountViewController.swift */; };
 /* End PBXBuildFile section */
@@ -35,7 +35,7 @@
 		8A7BAFEB289154C200CA4795 /* CreatorsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreatorsList.storyboard; sourceTree = "<group>"; };
 		8A7BAFEC289154C200CA4795 /* CreatorsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorsListViewController.swift; sourceTree = "<group>"; };
 		8A7BAFED289154C200CA4795 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		CE573F3A28929B6B000B8E4F /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
+		CE573F3A28929B6B000B8E4F /* CircleStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleStruct.swift; sourceTree = "<group>"; };
 		CEC8B3762892A48A001A2836 /* Count.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Count.storyboard; sourceTree = "<group>"; };
 		CEC8B3782892A4A4001A2836 /* CountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountViewController.swift; path = "squidCount/View Controllers/CountViewController.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -54,7 +54,7 @@
 		7F735E99289021E1005F2D77 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CE573F3A28929B6B000B8E4F /* Struct.swift */,
+				CE573F3A28929B6B000B8E4F /* CircleStruct.swift */,
 				8A7BAFEA289154C200CA4795 /* Creator.swift */,
 			);
 			path = Models;
@@ -209,7 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE573F3B28929B6B000B8E4F /* Struct.swift in Sources */,
+				CE573F3B28929B6B000B8E4F /* CircleStruct.swift in Sources */,
 				8A7BAFEE289154D700CA4795 /* Creator.swift in Sources */,
 				8A7BAFEF289154DA00CA4795 /* CreatorsListViewController.swift in Sources */,
 				89B52499289018B5001B417B /* MainViewController.swift in Sources */,

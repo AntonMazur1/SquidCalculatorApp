@@ -8,7 +8,6 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    
     @IBOutlet var buttons: [UIButton]!
     
     var figure: Shape!
@@ -25,6 +24,7 @@ class MainViewController: UIViewController {
         default:
             return
         }
+        
         showNextVC()
     }
     

@@ -8,17 +8,14 @@
 import UIKit
 
 class CountViewController: UIViewController {
-    
     @IBOutlet var figureImageView: UIImageView!
     
     @IBOutlet var perimeterLabel: UILabel!
     @IBOutlet var squareLabel: UILabel!
     
     @IBOutlet var radiusTextField: UITextField!
-    
     @IBOutlet var heightTextField: UITextField!
     @IBOutlet var widthTextField: UITextField!
-    
     @IBOutlet var sideOneTextField: UITextField!
     @IBOutlet var sideTwoTextField: UITextField!
     @IBOutlet var sideThreeTextField: UITextField!
@@ -31,11 +28,11 @@ class CountViewController: UIViewController {
     @IBOutlet var results: UIStackView!
     
     var shape: Shape!
+    
     private var textFields: [UITextField] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
         textFields = [radiusTextField, widthTextField, heightTextField, sideOneTextField, sideTwoTextField, sideThreeTextField]
         for textField in textFields {
@@ -44,7 +41,7 @@ class CountViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
+        super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     
@@ -52,33 +49,38 @@ class CountViewController: UIViewController {
         switch shape {
         case .circle:
             var figure = Circle.getCircle()
-            if checkTextFields(radiusTextField) == false {
-                figure.radius = Double(radiusTextField.text ?? "") ?? 0
+            if !(checkTextFields(radiusTextField)) {
+                guard let radiusTextField = radiusTextField.text else { return }
+                figure.radius = Double(radiusTextField) ?? 0
                 perimeterLabel.text = String(format: "%.2f", figure.perimeter)
                 squareLabel.text = String(format: "%.2f", figure.square)
                 results.isHidden = false
-                view.endEditing(true)
             }
         case .rectangle:
             var figure = Rectangle.getRectangle()
-            if checkTextFields(heightTextField, widthTextField) == false {
-                figure.height = Double(heightTextField.text ?? "") ?? 0
-                figure.width = Double(widthTextField.text ?? "") ?? 0
+            if !(checkTextFields(heightTextField, widthTextField)) {
+                guard let heightTextField = heightTextField.text,
+                      let widthTextField = widthTextField.text
+                else { return }
+                figure.height = Double(heightTextField) ?? 0
+                figure.width = Double(widthTextField) ?? 0
                 perimeterLabel.text = String(format: "%.2f", figure.perimeter)
                 squareLabel.text = String(format: "%.2f", figure.square)
                 results.isHidden = false
-                view.endEditing(true)
             }
         default:
             var figure = Triangle.getTriangle()
-            if checkTextFields(sideOneTextField, sideTwoTextField, sideThreeTextField) == false {
-                figure.sideOne = Double(sideOneTextField.text ?? "") ?? 0
-                figure.sideTwo = Double(sideTwoTextField.text ?? "") ?? 0
-                figure.sideThree = Double(sideThreeTextField.text ?? "") ?? 0
+            if !(checkTextFields(sideOneTextField, sideTwoTextField, sideThreeTextField)) {
+                guard let sideOneTextField = sideOneTextField.text,
+                      let sideTwoTextField = sideTwoTextField.text,
+                      let sideThreeTextField = sideThreeTextField.text
+                else { return }
+                figure.sideOne = Double(sideOneTextField) ?? 0
+                figure.sideTwo = Double(sideTwoTextField) ?? 0
+                figure.sideThree = Double(sideThreeTextField) ?? 0
                 perimeterLabel.text = String(format: "%.2f", figure.perimeter)
                 squareLabel.text = String(format: "%.2f", figure.square)
                 results.isHidden = false
-                view.endEditing(true)
             }
         }
     }
@@ -90,13 +92,11 @@ class CountViewController: UIViewController {
             title = figure.name
             figureImageView.image = UIImage(named: figure.imageName)
             circleParameters.isHidden.toggle()
-            
         case .rectangle:
             let figure = Rectangle.getRectangle()
             title = figure.name
             figureImageView.image = UIImage(named: figure.imageName)
             rectangleParameters.isHidden.toggle()
-            
         default:
             let figure = Triangle.getTriangle()
             title = figure.name
@@ -118,11 +118,7 @@ class CountViewController: UIViewController {
     
     private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            for textField in self.textFields {
-                textField.text = ""
-            }
-        }
+        let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
     }
@@ -132,6 +128,7 @@ class CountViewController: UIViewController {
     }
 }
 
+//MARK: UITextField Delegate
 extension CountViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField.text != "" || string != "" {

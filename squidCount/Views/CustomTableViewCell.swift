@@ -8,9 +8,7 @@
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
-
     @IBOutlet var avatarImage: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var positionLabel: UILabel!
-
 }

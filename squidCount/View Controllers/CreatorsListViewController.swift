@@ -8,7 +8,6 @@
 import UIKit
 
 class CreatorsListViewController: UITableViewController {
-    
     private let creators = Creator.getEmployeDetails()
     
     // MARK: - Table view data source
